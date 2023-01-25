@@ -1,4 +1,13 @@
+main{
+    background-color: rgb(230, 221, 221);
+    height:50em;
+}
 button{
-    width: 20vh;
+    width: 15vh;
     height: 10vh;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
 }

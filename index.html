@@ -16,34 +16,42 @@
 
 <body>
     <header></header>
-    <main>
-        <div class="container">
+    <main class="">
+        <div class="container bg-secondary">
             <div class="row ">
                 <div class="col-12 col-sm-11 m-5">
                     <div class="border border-5">
                         <h1 class="p-5">Filter By: </h1>
                         <span class=" d-flex justify-content-center m-3">
                             <button class="btn btn-primary m-3" onclick="filterPackagesPriority()">Priority</button>
-                            <button class="btn btn-danger p-2 m-3" onclick="">Express</button>
-                            <button class="btn btn-success p-2 m-3" onclick="">Free</button>
+                            <button class="btn btn-danger p-2 m-3" onclick="filterPackagesExpress()">Express</button>
+                            <button class="btn btn-success p-2 m-3" onclick="filterPackagesFree()">Free</button>
                             <span class="d-flex justify-content-center">
-                                <span><button class="btn btn-primary m-3" onclick="">Recipient</button>
-                                    <button class="btn btn-danger p-2 m-3"
-                                        onclick="filterPackagesFragile()">Fragile</button>
-                                    <button class="btn btn-success p-2 m-3" onclick="searching()">Tracking
-                                        Number</button>
-                                </span>
+                                <button class="btn btn-danger p-2 m-3"
+                                    onclick="filterPackagesFragile()">Fragile</button>
+                                <button class="btn btn-success p-2 m-3" onclick="searching()">Tracking
+                                    Number</button>
                             </span>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div id="packages"></div>
+        <div class="container bg-secondary">
+            <div class="col">
+                <div class="row ">
+                    <div class="text-center">
+                        <h1>Information Below</h1>
+                        <p class="font border container row  " id="packages"></p>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
+
+
+
+
+
     </main>
     <footer></footer>
 

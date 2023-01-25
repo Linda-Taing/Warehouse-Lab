@@ -48,15 +48,20 @@ let packages = [
 //     {console.log('packages');
 //     })
 
-// NOTE: FUNCTIONS:
+
+NOTE: FUNCTIONS:
+
+
+
+
 function drawPackages(array){
     let packageElement = document.getElementById('packages')
     console.log(packageElement);
     let template = ''
-   
     array.forEach(package => { template += package.to })
-    packageElement.innerText = template 
-    // let allPackages = ''
+    // array.forEach(package => { template += '<span ${packages.to}</span>'})
+    packageElement.innerHTML = template 
+ 
 
 }
 
@@ -65,6 +70,21 @@ function filterPackagesPriority(){
     const Priority = packages.filter(package => package.priorityLevel == 'priority')
     console.log(Priority);
     drawPackages(Priority)
+}
+function filterPackagesExpress(){
+    const Express = packages.filter(package => package.priorityLevel == 'express')
+    console.log(Express);
+    drawPackages(Express)
+}
+function filterPackagesFree(){
+    const Free = packages.filter(package => package.priorityLevel == 'free')
+    console.log(Free);
+    drawPackages(Free)
+}
+function filterPackagesRecipient(){
+    const Recipient = packages.filter(package => package.priorityLevel == '')
+    console.log(Recipient);
+    drawPackages(Recipient)
 }
 
 function filterPackagesFragile(){
@@ -91,4 +111,4 @@ drawPackages([foundPackage])
 
 
 // Section "Draw"
-drawPackages(packages)
+drawPackages(packages) 
